@@ -8,15 +8,16 @@ const Navbar = () => {
         const isActive = (path) => location.pathname === path ? 'active' : '';
 
 
-return <nav>
+return <>
+        <nav>
                 <div className="nav-center">
                         <div className="logo">
-                                <Link to="/" className="link-logo">
-                                <img src="https://i.ibb.co/7Gjg8NB/logourbanshop.png"/>
-                                <div className="logo-title">
-                                        <span className="color-logo1">URBAN</span>
-                                        <span  className="color-logo2">SHOP</span>
-                                </div> 
+                                <Link to="react-shop" className="link-logo">
+                                        <img src="https://i.ibb.co/7Gjg8NB/logourbanshop.png"/>
+                                        <div className="logo-title">
+                                                <span className="color-logo1">URBAN</span>
+                                                <span  className="color-logo2">SHOP</span>
+                                        </div> 
                                 </Link>
                         </div>     
                         <ul className="navigation">
@@ -31,5 +32,6 @@ return <nav>
                         </div>
                 </div>
         </nav>
+</>
 }
 export default Navbar
