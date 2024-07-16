@@ -1,13 +1,9 @@
-
 * {
     margin: 0;
     padding: 0;
 }
 
-
-
 :root {
-
 --bg-primary-top :#e9e2d0;
 --bg-secondary :#6e5773;
 --bg-border-nav :#6e5773;
@@ -17,7 +13,6 @@
 --btn-card-st : #88818f;
 }
 
-
 body {
     background-color:#fff;
     margin: 0;
@@ -25,7 +20,6 @@ body {
 }
 
 :root {
-  
     --primary: #080808;
     --secondary: #97CEE0;
     --white: #ffffff;
@@ -34,7 +28,6 @@ body {
   }
   
   .description {
-    
     position: relative;
     display: block;
     z-index: 3;
@@ -42,7 +35,6 @@ body {
   }
   
   .btn {
-    
     position: relative;
     cursor: pointer;
     padding: 10px 20px;
@@ -65,7 +57,6 @@ body {
     
     
     .btn {
-      
       &:before, &:after {
         content: '';
         position: absolute;
@@ -78,7 +69,6 @@ body {
       }
         
       &:before {
-  
         background: var(--secondary-blue);
         transition: 0.5s ease-in;
         transition-delay: .2s;
@@ -92,9 +82,7 @@ body {
       }
   
       &:hover {
-  
         &:before, &:after {
-  
           transform: translate(-50%, -50%) scale(310);
         }
       }
@@ -102,13 +90,9 @@ body {
   }
   View Compiled
 
-
 .pb-30 {
-    padding-bottom: 30px;
-    
+    padding-bottom: 30px; 
 }
-
-
 /*  Navigation - top */
 
 nav {
@@ -121,11 +105,12 @@ nav {
     border-color: var(--bg-border-nav); 
 }
 
-.bg-blue { background-color: blue;}
+.bg-blue {
+    background-color: blue;
+}
 
 .logo {
-    display: flex;
-    
+    display: flex;  
 }
 
 .link-logo {
@@ -180,46 +165,68 @@ nav img {
     margin: 0 10px;
 }
 
+/* Estilo para enlaces normales */
 .navigation li a {
     font-size: 17px;
     font-weight: 500;
     padding: 10px;
+    cursor: pointer;
     font-family: Arial, Helvetica, sans-serif;
-    display:inline-block;
-    text-decoration: none;
-    color:#4e4747;
-    position: relative;
     display: inline-block;
-
-}
-
-
-.navigation li a::before,
-.navigation li a::after {
+    text-decoration: none;
+    color: #0d4291;
+    position: relative;
+  }
+  
+  /* Estilo para el efecto de borde inferior */
+  .navigation li a::before,
+  .navigation li a::after {
     content: '';
     position: absolute;
     bottom: 0;
-    width: 50%;
-    height: 2px;
-    background-color: #92a4ab;
-    transform: scaleX(0);
-    transition: transform 0.3s ease;
-}
-
-.navigation li a::before {
-    left: 50%;
-    transform-origin: left;
-}
-
-.navigation li a::after {
-    right: 50%;
-    transform-origin: right;
-}
-
-.navigation li a:hover::before,
-.navigation li a:hover::after {
-    transform: scaleX(1);
-}
+    left: 0;
+    width: 100%;
+    height: 0;
+    border-bottom: 2px solid transparent; /* Borde inferior transparente por defecto */
+    transition: border-color 0.3s ease; /* Transición para el color del borde */
+  }
+  
+  /* Estilo específico para el borde inferior en hover */
+  .navigation li a::after {
+    border-bottom: 2px solid #92a4ab; /* Color del borde inferior */
+    transform: scaleX(0); /* Comienza sin ancho */
+    transition: transform 0.3s ease; /* Transición para expandirse */
+  }
+  
+  /* Aplicar el efecto de borde inferior solo a los enlaces no activos */
+  .navigation li a:not(.active):hover::after {
+    transform: scaleX(1); /* Expandir el borde inferior en hover */
+  }
+  
+  /* Estilo para enlaces activos */
+  .navigation li a.active {
+    font-size: 17px;
+    font-weight: 500;
+    padding: 10px;
+    cursor: pointer;
+    font-family: Arial, Helvetica, sans-serif;
+    display: inline-block;
+    text-decoration: none;
+    color: #0d4291;
+    position: relative;
+  }
+  
+  /* Borde inferior activo */
+  .navigation li a.active::before,
+  .navigation li a.active::after {
+    border-color: #b7c3c7; /* Color del borde inferior activo */
+  }
+  
+  /* Quitar el efecto de borde inferior en enlaces no activos */
+  .navigation li a:not(.active)::after {
+    transform: scaleX(0); /* Ocultar el borde inferior en enlaces no activos */
+  }
+  
 
 /*  card widget */
 
@@ -229,7 +236,6 @@ nav img {
     flex-wrap: wrap;
     margin-top: 20px;
 }
-
 
 .icon-avatar {
     width: 24px;
@@ -247,7 +253,6 @@ nav img {
     color: #606c8b;
 }
 
-
 .icon-cart {
     font-size: 24px;
     margin-right: 10px;
@@ -255,6 +260,7 @@ nav img {
     margin-bottom: 30px !important;
     color: #84979c;
 }
+
 /* content body  */
 .container-fluid {
     width: 100%;
@@ -283,9 +289,6 @@ h1.main-title{
 h1.main-title::first-letter {
     text-transform: uppercase;
 }
-
-
-
 
 /*  elements item list container */ 
 
@@ -317,8 +320,6 @@ h1.main-title::first-letter {
 .card:hover {
     border:1px solid #d8d8da;
 }
-
-
 
 .card img {
     width: 100%;
@@ -398,7 +399,6 @@ h1.main-title::first-letter {
     gap: 10px;
 }
 
-
 .progress-container {
     width: 150px;
     background-color: #f3f3f3;
@@ -461,6 +461,7 @@ h1.main-title::first-letter {
 .pb-40 {
     margin-bottom: 30px;
 }
+
 .disable {
     pointer-events: none;
     opacity: 0.5;
