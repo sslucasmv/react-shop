@@ -27,7 +27,7 @@ function App() {
 
   return (
     <>
-   <BrowserRouter >
+   <BrowserRouter basename='/react-shop/' >
    <Navbar />
     <Routes>
       <Route path="react-shop" element={<ContainerBody><ItemListContainer productos={productos} /></ContainerBody> }/>
