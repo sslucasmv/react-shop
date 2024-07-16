@@ -489,6 +489,31 @@ h1.main-title::first-letter {
   }
   
 
+/* not found */
+
+.not-found {
+    display: flex;
+    width: 600px;
+    height: 200px;
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 50px auto;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    border: 1px solid rgb(79, 26, 26);
+    padding: 10px;
+    border-radius: 4px;
+}
+
+.not-found h2 {
+    color: rgb(131, 48, 48);
+}
+
+.not-found p {
+    margin-top: 20px;
+    color: rgb(131, 48, 48);
+}
 
 /*  count */
 

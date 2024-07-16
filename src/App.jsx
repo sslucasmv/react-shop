@@ -9,6 +9,7 @@ import ContainerBody from './components/layouts/ContainerBody'
 import FetchData from '../fetchData'
 import ItemListContainer from './components/common/ItemListContainer'
 import fetchData from '../fetchData'
+import NotFound from './components/layouts/NotFound'
 
 
 function App() {
@@ -32,7 +33,9 @@ function App() {
       <Route path="react-shop" element={<ContainerBody><ItemListContainer productos={productos} /></ContainerBody> }/>
       <Route path="/react-shop/nosotros"  element={<ContainerBody><Nosotros /></ContainerBody> }/>
       <Route path='/react-shop/contacto' element={<ContainerBody><Contacto /></ContainerBody>  }/>
+      <Route path="*" element={<NotFound />} />
     </Routes>
+
    </BrowserRouter>
 
    <Footer />
