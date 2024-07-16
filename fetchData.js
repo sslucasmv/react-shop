@@ -1,5 +1,4 @@
-// FetchData.js
-import productos from './productos.json'; // Importa el archivo JSON de productos
+import productos from './productos.json'
 
 export default function fetchData() {
     return new Promise(resolve => {
@@ -9,3 +8,5 @@ export default function fetchData() {
         }, 1000);
     });
 }
+
+

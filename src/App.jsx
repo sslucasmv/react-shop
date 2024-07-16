@@ -8,9 +8,20 @@ import Contacto from './components/common/Contacto'
 import ContainerBody from './components/layouts/ContainerBody'
 import FetchData from '../fetchData'
 import ItemListContainer from './components/common/ItemListContainer'
+import fetchData from '../fetchData'
 
 
 function App() {
+
+  const [productos, setProductos] = useState([])
+
+  useEffect(() => {
+    fetchData()
+    .then((response) => {
+      setProductos(response);
+    })
+  },[])
+
  
 
   return (
@@ -18,13 +29,17 @@ function App() {
    <BrowserRouter >
    <Navbar />
     <Routes>
-      <Route path="react-shop" element={<ContainerBody><LandinPage /></ContainerBody> }/>
+      <Route path="react-shop" element={<ContainerBody><ItemListContainer productos={productos} /></ContainerBody> }/>
       <Route path="/react-shop/nosotros"  element={<ContainerBody><Nosotros /></ContainerBody> }/>
       <Route path='/react-shop/contacto' element={<ContainerBody><Contacto /></ContainerBody>  }/>
     </Routes>
    </BrowserRouter>
+
    <Footer />
+  
     </>
+
+  
   )
 }
 

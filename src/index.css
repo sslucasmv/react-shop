@@ -9,7 +9,6 @@
 --bg-border-nav :#6e5773;
 --bg-btn-cart :  #ea9085;
 --bg-btn-cart-hover :  #b45447;
-
 --btn-card-st : #88818f;
 }
 
@@ -385,10 +384,13 @@ h1.main-title::first-letter {
     font-family: Arial, Helvetica, sans-serif;
 }
 
-/* cargador */ 
+
+/* progress bar */
+
+/* ItemListContainer.css */
 
 .content-load {
-    width:100%;
+    width: 100%;
     min-height: 400px;
     display: flex;
     flex-direction: column;
@@ -404,31 +406,89 @@ h1.main-title::first-letter {
     background-color: #f3f3f3;
     border-radius: 25px;
     overflow: hidden;
-    margin:10px 0;
+    margin: 10px 0;
 }
 
 .progress-bar {
     width: 0%;
     height: 8px;
-    padding:0 10px;
-    background-color:#33647c;;
-    text-align: center;
-    line-height: 30px;
+    background-color: #33647c;
+    border-radius: 10px;
+    animation: progress-animation 2s linear infinite;
+}
+
+@keyframes progress-animation {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 100%;
+    }
+}
+
+/* cargador 2 */
+
+/* ItemListContainer.css */
+.cont-loader {
+    display: flex;
+    width: 200px;
+    height: 400px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    justify-items: center;
+}
+
+.cont-loader p {
     font-family: Arial, Helvetica, sans-serif;
-    color: rgb(34, 33, 39);
-    border-radius:10px 0 0 10px;
-    transition: width 0s ease-in-out;
+    font-size: 14px;
+    margin-bottom: 15px;
 }
 
-/* Animation for demonstration */
-@keyframes load {
-    from { width: 0%; }
-    to { width: 100%; }
-}
+.loader-container {
+    display: flex;
 
-.loadProgress {
-    animation: load 2.2s linear forwards;
-}
+  }
+  
+  .loader {
+    display: flex;
+    justify-content: space-around;
+    width: 80px; /* Ajusta según sea necesario */
+    height: 40px; /* Ajusta según sea necesario */
+  }
+  
+  .circle1,
+  .circle2,
+  .circle3 {
+    width: 15px; /* Ajusta según sea necesario */
+    height: 15px; /* Ajusta según sea necesario */
+    border-radius: 50%;
+    background-color: #33647c; /* Color de los círculos */
+    animation: scale 0.5s infinite ease-in-out;
+  }
+  
+  .circle2 {
+    animation-delay: 0.1s; /* Delay para el segundo círculo */
+  }
+  
+  .circle3 {
+    animation-delay: 0.2s; /* Delay para el tercer círculo */
+  }
+  
+  @keyframes scale {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.2);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+
 
 /*  count */
 
