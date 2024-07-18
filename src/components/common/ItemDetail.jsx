@@ -24,8 +24,8 @@ const ItemDetail = ({ productos }) => {
   }
 
   return (
-    <div>
-      <p>Detalle producto seleccionado: {productoSeleccionado.title}</p>
+    <div className="container-fluid">
+      <div className="container-center">
       <Item 
         key={productoSeleccionado.id} 
         id={productoSeleccionado.id} 
@@ -33,6 +33,7 @@ const ItemDetail = ({ productos }) => {
         img={productoSeleccionado.img}
         price={productoSeleccionado.price} 
       />
+    </div>
     </div>
   );
 };
