@@ -1,4 +1,4 @@
-import { Link, useLocation } from "react-router-dom"
+import { NavLink, useLocation } from "react-router-dom"
 
 const Navbar = () => {
 
@@ -12,18 +12,18 @@ return <>
         <nav>
                 <div className="nav-center">
                         <div className="logo">
-                                <Link to="react-shop" className="link-logo">
+                                <NavLink to="react-shop" className="link-logo">
                                         <img src="https://i.ibb.co/7Gjg8NB/logourbanshop.png"/>
                                         <div className="logo-title">
                                                 <span className="color-logo1">URBAN</span>
                                                 <span  className="color-logo2">SHOP</span>
                                         </div> 
-                                </Link>
+                                </NavLink>
                         </div>     
                         <ul className="navigation">
-                                <li><Link to="react-shop" className={isActive('/react-shop')}>Home</Link></li>
-                                <li><Link to="react-shop/nosotros" className={isActive('/react-shop/nosotros')}>Nosotros</Link></li>
-                                <li><Link to="react-shop/contacto" className={isActive('/react-shop/contacto')}>Contacto</Link></li>
+                                <li><NavLink to="/" className={isActive('/')}>Home</NavLink></li>
+                                <li><NavLink to="/nosotros" className={isActive('/react-shop/nosotros')}>Nosotros</NavLink></li>
+                                <li><NavLink to="/contacto" className={isActive('/react-shop/contacto')}>Contacto</NavLink></li>
                         </ul>
                         <div className="card-widget">
                                 <div className="icon-avatar">

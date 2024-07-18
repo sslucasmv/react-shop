@@ -2,14 +2,9 @@
 import { useState, useEffect } from "react";
 import ItemList from "./Itemlist";
 
-
-
 const ItemListContainer = ({productos}) => {
 
     const [loading,setLoading] = useState(true)
-
-
-    
     useEffect(() => {
        if(productos.length > 0) {
         setLoading(false)
