@@ -8,7 +8,7 @@ const ItemListContainer = ({ productos }) => {
     const { category } = useParams();
 
     useEffect(() => {
-        // Simulación de una carga asíncrona (puedes sustituirlo con tu lógica real)
+       
         setTimeout(() => {
             if (category) {
                 const filtered = productos.filter(producto => producto.category === category);
@@ -16,15 +16,15 @@ const ItemListContainer = ({ productos }) => {
             } else {
                 setFilteredProductos(productos);
             }
-            setLoading(false); // Cambia el estado a 'false' después de un tiempo
+            setLoading(false); 
         }, 1000); 
-    }, [category, productos]); // El efecto se ejecuta cuando cambia la categoría o la lista de productos
+    }, [category, productos]); 
 
     return (
         <>
            
                 <div className="content-card">
-                    <ItemList productos={filteredProductos} />
+                    <ItemList productos={filteredProductos}  />
                 </div>
      
         </>
