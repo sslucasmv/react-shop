@@ -1,45 +1,34 @@
-
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import ItemList from "./Itemlist";
+import { useParams } from "react-router-dom";
 
-const ItemListContainer = ({productos}) => {
+const ItemListContainer = ({ productos }) => {
+   
+    const [filteredProductos, setFilteredProductos] = useState([]);
+    const { category } = useParams();
 
-    const [loading,setLoading] = useState(true)
     useEffect(() => {
-       if(productos.length > 0) {
-        setLoading(false)
-       }
-    },[productos])
-
+        // Simulación de una carga asíncrona (puedes sustituirlo con tu lógica real)
+        setTimeout(() => {
+            if (category) {
+                const filtered = productos.filter(producto => producto.category === category);
+                setFilteredProductos(filtered);
+            } else {
+                setFilteredProductos(productos);
+            }
+            setLoading(false); // Cambia el estado a 'false' después de un tiempo
+        }, 1000); 
+    }, [category, productos]); // El efecto se ejecuta cuando cambia la categoría o la lista de productos
 
     return (
         <>
-            {loading ? (
-            <div className="cont-loader">
-            <p>Cargado...</p>
-           <div className="loader-container">
            
-           <div className="loader">
-             <div className="circle1"></div>
-             <div className="circle2"></div>
-             <div className="circle3"></div>
-           </div>
-         </div>
-         </div>
-
-
-            ):( 
-            <div>
                 <div className="content-card">
-                <ItemList productos={productos} />
+                    <ItemList productos={filteredProductos} />
                 </div>
-            </div>
-            )
-            }
-    </>
-    )
-    
-    
-}
+     
+        </>
+    );
+};
 
 export default ItemListContainer;

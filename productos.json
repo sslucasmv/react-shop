@@ -55,20 +55,20 @@
     },
     {
         "id": 7,
-        "title": "Nike SB Dunk high PRO UR",
+        "title": "Nike SB Dunk high PRO depor",
         "price": 180200,
         "img": "https://nikearprod.vtexassets.com/arquivos/ids/846500-1600-1600?width=1600&height=1600&aspect=true",
         "description": "Las mejores para correr",
         "stock": 6,
-        "category": "urbanas"
+        "category": "deportivas"
     },
     {
         "id": 8,
-        "title": "Air Jordan 1 UR",
+        "title": "Air Jordan 1 depo",
         "price": 220500,
         "img": "https://nikearprod.vtexassets.com/arquivos/ids/730416-1200-1200?width=1200&height=1200&aspect=true",
         "description": "Las jordan con onda",
         "stock": 10,
-        "category": "urbanas"
+        "category": "deportivas"
     }
 ]

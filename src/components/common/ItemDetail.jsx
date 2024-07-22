@@ -30,6 +30,7 @@ const ItemDetail = ({ productos }) => {
         key={productoSeleccionado.id} 
         id={productoSeleccionado.id} 
         title={productoSeleccionado.title}
+        category={productoSeleccionado.category}
         img={productoSeleccionado.img}
         price={productoSeleccionado.price} 
       />
